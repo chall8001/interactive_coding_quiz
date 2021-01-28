@@ -1,0 +1,9 @@
+.hide {
+  display: none;
+}
+
+#timer {
+  float: right;
+  color: black;
+  margin-top: 0px;
+}
