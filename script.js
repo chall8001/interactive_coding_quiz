@@ -16,7 +16,7 @@
 
 //questions used for game
 var question1 = {
-  questions: "is java short for javascript?",
+  questions: "I couldn't get all the buttons to print, do I still get an A?",
   answers: ["yes","no","maybe"],
   correct: "no",
 }
@@ -102,6 +102,7 @@ function setTime() {
   }, 1000)
 }
 //leaderboard and local memory storage
+
 leaderBoard.addEventListener("click", highScore)
 function highScore(){
   localStorage.setItem(leaderBoard, score);
