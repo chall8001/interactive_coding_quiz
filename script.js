@@ -40,8 +40,10 @@ var quizEl = document.getElementById("questions")
 var startPage = document.getElementById("starting-page")
 var questPage = document.getElementById("question-page")
 var finalScore = document.getElementById("scoreBoard")
+var leaderBoard = document.getElementById("submit-score")
 
-
+//player's score
+score = 0
 
 //this hides the start page div, displays the first question, and executes the timer
 function startQuiz(){
@@ -65,7 +67,7 @@ function newAnswer(){
   var i;
 for (i = 0; i <currentQuestion.answers.length; i++) { 
   var answerBtn = document.createElement("button")
-    quizEl.appendChild(answerBtn)
+  UserInput.appendChild(answerBtn)
     answerBtn.innerHTML = currentQuestion.answers[i++]
     UserInput.setAttribute("class", "answers")}
 
@@ -99,8 +101,14 @@ function setTime() {
 
   }, 1000)
 }
+//leaderboard and local memory storage
+leaderBoard.addEventListener("click", highScore)
+function highScore(){
+  localStorage.setItem(leaderBoard, score);
+  localStorage.getItem(leaderBoard, score);
+}
 
-
+highScore()
 
 
   

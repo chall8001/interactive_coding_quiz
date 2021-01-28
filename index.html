@@ -8,14 +8,24 @@
     <link rel=stylesheet href="style.css"></link>
 </head>
 <body>
+    <!-- start page -->
+    <div class>scoreboard</div>
+    <div id="timer">Time:</div>
+    <center>
     <div id="starting-page"><h1>Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time alloted.</p>
-        <button id="startBtn">Start Quiz</button></div>
-
-    <div id="question-page" class="hide"><div class="container" id="questions"></div>
-    <div id="answer">Select an answer:</div><div id="timer">Time:</div></div>
-
-    <div id="scoreBoard" class="hide"></div>
+        <button id="startBtn">Start Quiz</button></div></center>
+    <!-- page questions -->
+       </div>
+        <center><div id="question-page" class="hide"><div class="container" id="questions"></div>
+    <div id="answer">Select an answer:</div></center>
+            <!-- scoreboard -->
+    <center><div id="scoreBoard" class="hide"><h1>High Scores</h1>
+            <label>Type your intials to save your score!</label>
+            <input type="text">
+            <input type="submit" value="Submit" id="submit-score">
+          </form>
+    </div></center>
 
     <script src="script.js"></script>
 </body>
