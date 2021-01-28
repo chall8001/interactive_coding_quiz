@@ -16,13 +16,19 @@
 
 //questions used for game
 var question1 = {
-  questions: "I couldn't get all the buttons to print, do I still get an A?",
+  questions: "Is java short for javascript?",
   answers: ["yes","no","maybe"],
   correct: "no",
 }
 
 var question2 = {
   questions: "is coding fun?",
+  answers: ["yes","no", "maybe"],
+  correct: "yes"
+}
+
+var question2 = {
+  questions: "Does javascript read a file from the top down?",
   answers: ["yes","no", "maybe"],
   correct: "yes"
 }
@@ -68,18 +74,15 @@ function newAnswer(){
 for (i = 0; i <currentQuestion.answers.length; i++) { 
   var answerBtn = document.createElement("button")
   UserInput.appendChild(answerBtn)
-    answerBtn.innerHTML = currentQuestion.answers[i++]
+    answerBtn.innerHTML = currentQuestion.answers[i]
     UserInput.setAttribute("class", "answers")}
 
-  answerBtn.addEventListener("click", checkAnswer)
-  function checkAnswer(){
-    if (currentQuestion.correct){
-    newQuestion()}
-    else{ console.log("incorrect!") 
-    newQuestion(i++)
-  }
-  }
-} 
+    UserInput.addEventListener("click", test)
+    function test(){
+    }}
+  
+
+ 
   
 //add event listeners that deploys 
 start.addEventListener("click", startQuiz)
@@ -101,6 +104,10 @@ function setTime() {
 
   }, 1000)
 }
+
+
+
+
 //leaderboard and local memory storage
 
 leaderBoard.addEventListener("click", highScore)
